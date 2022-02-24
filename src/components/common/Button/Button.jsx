@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stylesButton from './Button.module.css';
 
-const Button = ({ onClick, isActive, title, icon }) => {
+const Button = ({ onClick, isActive, title, icon, isBackground = 1 }) => {
   const buttonAddStyle = isActive ? stylesButton.active : stylesButton.inactive;
-
+  const backgroundAddStyle = isBackground ? '' : stylesButton.noBackground;
   return (
     <button
-      className={`${stylesButton.button} ${buttonAddStyle}`}
+      className={`${stylesButton.button} ${buttonAddStyle} ${backgroundAddStyle}`}
       type="submit"
       onClick={onClick}
     >

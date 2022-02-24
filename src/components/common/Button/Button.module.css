@@ -19,3 +19,8 @@
   background: var(--button-background-inactive);
   color: var(--button-text-inactive);
 }
+
+.noBackground{
+  background: none;
+  color: var(--button-background-active);
+}
